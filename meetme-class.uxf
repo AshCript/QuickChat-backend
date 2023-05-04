@@ -1,0 +1,25 @@
+<diagram program="umletino" version="15.0.0"><zoom_level>10</zoom_level><element><id>UMLClass</id><coordinates><x>540</x><y>240</y><w>150</w><h>160</h></coordinates><panel_attributes>User
+-
+id: int
+firstName: string
+lastName: string
+email: string
+phone: string
+password: string
+createdAt: date
+updatedAt: date</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>860</x><y>250</y><w>140</w><h>130</h></coordinates><panel_attributes>Message
+-
+id: int
+#idSender: int
+#idReceiver: int
+content: string
+createdAt: date
+updatedAt: date</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>230</x><y>240</y><w>130</w><h>110</h></coordinates><panel_attributes>Contact
+-
+id: int
+#idUser: int
+#idFriend: int</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>350</x><y>290</y><w>210</w><h>40</h></coordinates><panel_attributes>lt=&lt;-
+m1=2
+m2=*</panel_attributes><additional_attributes>190;10;10;10</additional_attributes></element><element><id>Relation</id><coordinates><x>680</x><y>290</y><w>200</w><h>40</h></coordinates><panel_attributes>lt=&lt;-
+m1=2
+m2=*</panel_attributes><additional_attributes>10;10;180;10</additional_attributes></element></diagram>
