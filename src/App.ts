@@ -21,6 +21,7 @@ export class App {
 
     this.initializeMiddlewares();
     this.initializeRoutes(routes);
+    this.initializeSocketIo();
 
     this.app.use(({ res }) => {
       const message =
@@ -38,7 +39,7 @@ export class App {
   }
 
   listen(): void {
-    this.app.listen(this.port, () => {
+    this.server.listen(this.port, () => {
       console.log('\n---------------------------------------------');
       console.log(
         `Application started on http://${process.env.DB_HOSTNAME}:${this.port} ✅`
@@ -70,6 +71,17 @@ export class App {
       });
     }
     console.log('===============================\n');
+  }
+
+  private initializeSocketIo() {
+    this.io.on('connection', (socket) => {
+      console.log('Hello Socket.io');
+      console.log('Socket : ', socket);
+      socket.on('sendMessage', (payload) => {
+        console.log('Payload : ', payload);
+        this.io.emit('receiveMessage', payload);
+      });
+    });
   }
 
   private randomHappy = (): string => {
