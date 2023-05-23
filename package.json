@@ -16,6 +16,11 @@
     "migrate:up": "npx sequelize-cli db:migrate",
     "migrate:undo": "npx sequelize-cli db:migrate:undo"
   },
+  "pre-commit": [
+      "ts.check",
+      "build",
+      "add-build"
+  ],
   "author": "RAKOTONDRABE As Manjaka Josvah",
   "license": "ISC",
   "dependencies": {
