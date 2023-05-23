@@ -41,7 +41,7 @@ exports.dbConfig = {
     dialectOptions: {
         ssl: process.env.NODE_ENV === 'development' ? false : {},
     },
-    timezone: process.env.TZ,
+    timezone: 'Etc/GMT+3',
     define: {
         charset: 'utf8mb4',
         collate: 'utf8mb4_general_ci',
