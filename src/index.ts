@@ -13,7 +13,7 @@ const routes: IRoute[] = [
 
 const app = new App(port, routes);
 
-const io = app.getIo();
+// const io = app.getIo();
 
 // io.on('connection', (socket) => {
 //   console.log('New user connection');
