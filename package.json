@@ -4,7 +4,7 @@
   "description": "Chat app",
   "main": "index.js",
   "scripts": {
-    "start": "node /vercel/output/src/index.js",
+    "start": "node /vercel/output/index.js",
     "build": "rimraf dist && tsc",
     "ts.check": "tsc --project tsconfig.json",
     "add-build": "git add dist",
