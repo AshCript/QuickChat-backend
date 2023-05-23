@@ -1,6 +1,5 @@
 import { Op } from 'sequelize';
 import { IMessageModel } from 'src/interfaces/models/IMessageModel';
-import { clearInterval } from 'timers';
 import { szModels } from '../../config/sequelize';
 import { IMessageDAO } from '../interfaces/dao/IMessageDAO';
 import { IUserDAO } from '../interfaces/dao/IUserDAO';
