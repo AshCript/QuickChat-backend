@@ -1,22 +1,18 @@
-//import { App } from './App';
-import express, { Request, Response } from 'express';
-//import { IRoute } from './interfaces/utils/IRoute';
-//import { ContactRoute } from './routes/ContactRoute';
-//import { MessageRoute } from './routes/MessageRoute';
-//import { UserRoute } from './routes/UserRoute';
+import { App } from './App';
+import { IRoute } from './interfaces/utils/IRoute';
+import { ContactRoute } from './routes/ContactRoute';
+import { MessageRoute } from './routes/MessageRoute';
+import { UserRoute } from './routes/UserRoute';
 
 const port = Number(process.env.PORT) || 3005;
-//const routes: IRoute[] = [
-//  new UserRoute(),
-//  new ContactRoute(),
-//  new MessageRoute(),
-//];
+const routes: IRoute[] = [
+  new UserRoute(),
+  new ContactRoute(),
+  new MessageRoute(),
+];
 
-//const app = new App(port, routes);
-const app = express();
-app.get('/', (_req: Request, res: Response) => {
-   return res.send('Hello World');
-});
+const app = new App(port, routes);
+
 // const io = app.getIo();
 
 // io.on('connection', (socket) => {
@@ -31,4 +27,4 @@ app.get('/', (_req: Request, res: Response) => {
 //   });
 // });
 
-app.listen(port, () => {console.log("Server started");});
+app.listen();

@@ -4,8 +4,8 @@
   "description": "Chat app",
   "main": "index.js",
   "scripts": {
-    "start": "node /vercel/output/index.js",
-    "build": "tsc",
+    "start": "",
+    "build": "",
     "ts.check": "tsc --project tsconfig.json",
     "add-build": "git add dist",
     "dev": "nodemon dist/index.js",
