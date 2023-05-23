@@ -1,4 +1,5 @@
 import dotenv from 'dotenv';
+import * as pg from 'pg';
 dotenv.config();
 
 export const dbConfig = {
@@ -8,7 +9,11 @@ export const dbConfig = {
   host: process.env.DB_HOSTNAME,
   port: process.env.DB_PORT,
   dialect: 'postgres',
-  timezone: process.env.TZ,
+  dialectModule: pg,
+  dialectOptions: {
+    ssl: process.env.NODE_ENV === 'development' ? false : {},
+  },
+  timezone: 'Etc/GMT+3',
   define: {
     charset: 'utf8mb4',
     collate: 'utf8mb4_general_ci',
