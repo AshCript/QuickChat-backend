@@ -4,8 +4,8 @@
   "description": "Chat app",
   "main": "index.js",
   "scripts": {
-    "start": "",
-    "build": "tsc",
+    "start": "node dist/index.js",
+    "build": "npx tsc",
     "dev": "nodemon dist/index.js",
     "ts": "ts-node index.ts",
     "up": "docker-compose up -d",
