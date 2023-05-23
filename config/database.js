@@ -10,6 +10,9 @@ export const dbConfig = {
   port: process.env.DB_PORT,
   dialect: 'postgres',
   dialectModule: pg,
+  dialectOptions: {
+    ssl: process.env.NODE_ENV === 'development' ? false : {},
+  },
   timezone: process.env.TZ,
   define: {
     charset: 'utf8mb4',
